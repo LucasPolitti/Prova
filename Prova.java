@@ -24,6 +24,16 @@ public class Prova {
         alternativas[3]="a) Hermione - b) Joana - c) Maria";
         alternativas[4]="a) Verde - b) Vermelho - c) Amarelo";
 
+        String[] respostas= new String[5];
+
+        respostas[0]="c";
+        respostas[1]="c";
+        respostas[2]="a";
+        respostas[3]="a";
+        respostas[4]="a";
+
+        String[] gabarito= new String[5];
+        
 
         for(int i=0; i<perguntas.length; i++){
 
@@ -32,11 +42,42 @@ public class Prova {
             System.out.println();
             System.out.println(alternativas[i]);
             System.out.println();
+
+            System.out.println("Digite a sua resposta: ");
+
+            gabarito[i]=scan.nextLine();
+
+            if(gabarito[i].equals(respostas[i])){
+                    nota+=2;
+                }
+
+
+
+            
+
             System.out.println("------------------------------------");
 
+
+        }
+        
+        System.out.println();
+        System.out.println("Sua nota é: " + nota);
+        System.out.println();
+        System.out.println("-------------------------------------");
+
+        if(nota==10){
+            System.out.println();
+            System.out.println("Parabéns!!! Você gabaritou a prova!!! ");
+            System.out.println();
+            System.out.println("---------------------------------------");
+            System.out.println();
+        }
+
+        
+
+       
 
         }
 
     }
 
-}
